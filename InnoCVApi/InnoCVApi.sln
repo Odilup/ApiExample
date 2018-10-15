@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2FBBC212-16D7-4FE0-8883-F6C3C811C0F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1D5052C1-A337-4371-B151-2A3BCAF31666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Domain.Entities", "InnoCVApi.Domain.Entities\InnoCVApi.Domain.Entities.csproj", "{FCFE89CB-FDA6-42AA-BEBA-C5941D574894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Domain.Repositories", "InnoCVApi.Domain.Repositories\InnoCVApi.Domain.Repositories.csproj", "{CADDA763-F0E5-4AE6-A041-243FA7512E4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Endpoint", "Endpoint", "{F7521DC6-94D0-4B5A-9A82-93488AE7AC0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.API.Endpoint", "InnoCVApi.API.Endpoint\InnoCVApi.API.Endpoint.csproj", "{DD82B32D-FB35-42B0-AF91-05F8D57F4D36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{78A51E7D-32A3-4632-9EDD-8588F9AD2FDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Data.DbContext", "InnoCVApi.Data.DbContext\InnoCVApi.Data.DbContext.csproj", "{3EA9FA86-8822-4207-B54C-42EB8F087457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Core.Common", "InnoCVApi.Core.Common\InnoCVApi.Core.Common.csproj", "{12845F03-6DF3-458B-9A80-A25A9DA6D544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Core.Resources", "InnoCVApi.Core.Resources\InnoCVApi.Core.Resources.csproj", "{0150A118-4904-4CE1-A708-47B684588C25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.API.Configuration", "InnoCVApi.API.Configuration\InnoCVApi.API.Configuration.csproj", "{E4253A6A-D51F-44CB-86F0-815F11A0EED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoCVApi.Core.Logging", "InnoCVApi.Core.Logging\InnoCVApi.Core.Logging.csproj", "{0382720D-6C44-424C-94E5-353716EE25BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCFE89CB-FDA6-42AA-BEBA-C5941D574894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFE89CB-FDA6-42AA-BEBA-C5941D574894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFE89CB-FDA6-42AA-BEBA-C5941D574894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFE89CB-FDA6-42AA-BEBA-C5941D574894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADDA763-F0E5-4AE6-A041-243FA7512E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADDA763-F0E5-4AE6-A041-243FA7512E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADDA763-F0E5-4AE6-A041-243FA7512E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADDA763-F0E5-4AE6-A041-243FA7512E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD82B32D-FB35-42B0-AF91-05F8D57F4D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD82B32D-FB35-42B0-AF91-05F8D57F4D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD82B32D-FB35-42B0-AF91-05F8D57F4D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD82B32D-FB35-42B0-AF91-05F8D57F4D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA9FA86-8822-4207-B54C-42EB8F087457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA9FA86-8822-4207-B54C-42EB8F087457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA9FA86-8822-4207-B54C-42EB8F087457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA9FA86-8822-4207-B54C-42EB8F087457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12845F03-6DF3-458B-9A80-A25A9DA6D544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12845F03-6DF3-458B-9A80-A25A9DA6D544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12845F03-6DF3-458B-9A80-A25A9DA6D544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12845F03-6DF3-458B-9A80-A25A9DA6D544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0150A118-4904-4CE1-A708-47B684588C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0150A118-4904-4CE1-A708-47B684588C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0150A118-4904-4CE1-A708-47B684588C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0150A118-4904-4CE1-A708-47B684588C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4253A6A-D51F-44CB-86F0-815F11A0EED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4253A6A-D51F-44CB-86F0-815F11A0EED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4253A6A-D51F-44CB-86F0-815F11A0EED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4253A6A-D51F-44CB-86F0-815F11A0EED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0382720D-6C44-424C-94E5-353716EE25BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0382720D-6C44-424C-94E5-353716EE25BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0382720D-6C44-424C-94E5-353716EE25BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0382720D-6C44-424C-94E5-353716EE25BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCFE89CB-FDA6-42AA-BEBA-C5941D574894} = {2FBBC212-16D7-4FE0-8883-F6C3C811C0F9}
+		{CADDA763-F0E5-4AE6-A041-243FA7512E4A} = {2FBBC212-16D7-4FE0-8883-F6C3C811C0F9}
+		{DD82B32D-FB35-42B0-AF91-05F8D57F4D36} = {F7521DC6-94D0-4B5A-9A82-93488AE7AC0B}
+		{3EA9FA86-8822-4207-B54C-42EB8F087457} = {78A51E7D-32A3-4632-9EDD-8588F9AD2FDA}
+		{12845F03-6DF3-458B-9A80-A25A9DA6D544} = {1D5052C1-A337-4371-B151-2A3BCAF31666}
+		{0150A118-4904-4CE1-A708-47B684588C25} = {1D5052C1-A337-4371-B151-2A3BCAF31666}
+		{E4253A6A-D51F-44CB-86F0-815F11A0EED3} = {F7521DC6-94D0-4B5A-9A82-93488AE7AC0B}
+		{0382720D-6C44-424C-94E5-353716EE25BF} = {1D5052C1-A337-4371-B151-2A3BCAF31666}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3397638E-6FBC-43B6-8997-1539AC2BE947}
+	EndGlobalSection
+EndGlobal

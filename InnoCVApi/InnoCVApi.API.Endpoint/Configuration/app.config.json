@@ -1,0 +1,3 @@
+﻿{
+  "Api:Database:ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=InnoCVApiDatabase;Trusted_Connection=True;MultipleActiveResultSets=true"
+}
