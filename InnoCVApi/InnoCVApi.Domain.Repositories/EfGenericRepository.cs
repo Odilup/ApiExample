@@ -22,64 +22,64 @@ namespace InnoCVApi.Domain.Repositories
             DbSet = dbContext.Set<TEntity>();
         }
 
-        public IQueryable<TEntity> AsQueryable()
+        public virtual IQueryable<TEntity> AsQueryable()
         {
             return DbSet.AsQueryable();
         }
 
-        public IEnumerable<TEntity> GetAll(params Expression<Func<TEntity, object>>[] navigationProperties)
+        public virtual IEnumerable<TEntity> GetAll(params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             var query = GetQuery(navigationProperties);
 
             return query.ToList();
         }
 
-        public Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[] navigationProperties)
+        public virtual Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             return Task.Run(() => GetAll(navigationProperties));
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate,
+        public virtual IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate,
             params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             var query = GetQuery(navigationProperties);
             return query.AsQueryable().Where(predicate);
         }
 
-        public Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate,
+        public virtual Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate,
             params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             return Task.Run(() => Find(predicate, navigationProperties));
         }
 
-        public TEntity First(Expression<Func<TEntity, bool>> predicate,
+        public virtual TEntity First(Expression<Func<TEntity, bool>> predicate,
             params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             return DbSet.First(predicate);
         }
 
-        public TEntity GetById(TKey id, params Expression<Func<TEntity, object>>[] navigationProperties)
+        public virtual TEntity GetById(TKey id, params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             var query = GetQuery(navigationProperties);
             return query.AsQueryable().FirstOrDefault(entity => entity.Id.Equals(id));
         }
 
-        public Task<TEntity> GetByIdAsync(TKey id, params Expression<Func<TEntity, object>>[] navigationProperties)
+        public virtual Task<TEntity> GetByIdAsync(TKey id, params Expression<Func<TEntity, object>>[] navigationProperties)
         {
             return DbSet.FindAsync(id);
         }
 
-        public void Add(TEntity entity)
+        public virtual void Add(TEntity entity)
         {
             DbSet.Add(entity);
         }
 
-        public void Delete(TEntity entity)
+        public virtual void Delete(TEntity entity)
         {
             DbSet.Remove(entity);
         }
 
-        public TEntity Modify(TEntity entity)
+        public virtual TEntity Modify(TEntity entity)
         {
             var oldEntity = DbSet.Find(entity.Id);
             if (oldEntity == null) return null;

@@ -27,22 +27,22 @@ namespace InnoCVApi.Domain.Repositories
             _dbContext = dbContext;
         }
 
-        public int Commit()
+        public virtual int Commit()
         {
             return _dbContext.SaveChanges();
         }
 
-        public Task<int> CommitAsync()
+        public virtual Task<int> CommitAsync()
         {
             return _dbContext.SaveChangesAsync();
         }
 
-        public int RollbackChanges()
+        public virtual int RollbackChanges()
         {
             return _dbContext.RollbackChanges();
         }
 
-        public Task<int> RollbackChangesAsync()
+        public virtual Task<int> RollbackChangesAsync()
         {
             return _dbContext.RollbackChangesAsync();
         }
