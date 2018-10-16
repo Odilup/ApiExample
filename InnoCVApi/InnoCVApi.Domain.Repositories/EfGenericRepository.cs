@@ -52,35 +52,6 @@ namespace InnoCVApi.Domain.Repositories
             return Task.Run(() => Find(predicate, navigationProperties));
         }
 
-        public TEntity Single(Expression<Func<TEntity, bool>> predicate,
-            params Expression<Func<TEntity, object>>[] navigationProperties)
-        {
-            var query = GetQuery(navigationProperties);
-
-            return query.AsQueryable().First(predicate);
-        }
-
-        public Task<TEntity> SingleAsync(Expression<Func<TEntity, bool>> predicate,
-            params Expression<Func<TEntity, object>>[] navigationProperties)
-        {
-            var query = GetQuery(navigationProperties);
-            return query.AsQueryable().FirstAsync(predicate);
-        }
-
-        public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate,
-            params Expression<Func<TEntity, object>>[] navigationProperties)
-        {
-            var query = GetQuery(navigationProperties);
-
-            return query.AsQueryable().FirstOrDefault(predicate);
-        }
-
-        public Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate,
-            params Expression<Func<TEntity, object>>[] navigationProperties)
-        {
-            return DbSet.FirstOrDefaultAsync(predicate);
-        }
-
         public TEntity First(Expression<Func<TEntity, bool>> predicate,
             params Expression<Func<TEntity, object>>[] navigationProperties)
         {

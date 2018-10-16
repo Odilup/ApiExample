@@ -63,7 +63,7 @@ namespace InnoCVApi.API.Endpoint
 
             builder.RegisterInstance<IAppConfiguration>(appConfiguration).SingleInstance();
 
-            builder.Register(context => new DatabaseContext(appConfiguration.DatabaseConnectionString))
+            builder.Register(context => new DatabaseContext(context.Resolve<IAppConfiguration>().DatabaseConnectionString))
                 .As<BaseDbContext>().InstancePerRequest();
 
             //register repository
@@ -99,8 +99,7 @@ namespace InnoCVApi.API.Endpoint
 
                     c.SingleApiVersion("v1", "InnoCV Api example")
                         .Description("Example API exercise")
-                        .Contact(contactBuilder => contactBuilder.Name("Javier Pulido")
-                            .Email("fjpulido@gmail.com"));
+                        .Contact(contactBuilder => contactBuilder.Name("Javier Pulido"));
 
                     c.IncludeXmlComments(commentsFile);
                 })

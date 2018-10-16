@@ -13,11 +13,6 @@ namespace InnoCVApi.Core.Logging
             _log = LogManager.GetLogger("exceptions");
         }
 
-        internal Log4NetLogger(ILog log)
-        {
-            _log = log;
-        }
-
         public void LogError(string activityId, Exception exception)
         {
             Task.Run(() =>
